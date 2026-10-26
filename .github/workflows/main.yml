@@ -1,0 +1,40 @@
+
+name: Build NOVA iOS IPA
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - name: Download project
+        uses: actions/checkout@v4
+
+      - name: Extract project ZIP
+        run: |
+          unzip -q NOVA_iOS12_Swift_Project.zip -d source
+
+      - name: Build iPhone app
+        run: |
+          cd source/NOVA_iOS12_Project
+          xcodebuild \
+            -project NOVACalculator.xcodeproj \
+            -scheme NOVACalculator \
+            -configuration Release \
+            -sdk iphoneos \
+            -derivedDataPath "$RUNNER_TEMP/build" \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+
+      - name: Package IPA
+        run: |
+          mkdir -p Payload
+          cp -R "$RUNNER_TEMP/build/Build/Products/Release-iphoneos/NOVACalculator.app" Payload/
+          zip -qry NOVA-unsigned.ipa Payload
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: NOVA-unsigned-IPA
+          path: NOVA-unsigned.ipa
