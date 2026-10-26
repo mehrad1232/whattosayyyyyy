@@ -1,0 +1,193 @@
+// !$*UTF8*$!
+{
+    archiveVersion = 1;
+    classes = {};
+    objectVersion = 56;
+    objects = {
+
+/* Begin PBXBuildFile section */
+        A10000000000000000000001 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000001 /* AppDelegate.swift */; };
+        A10000000000000000000002 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000002 /* CalculatorViewController.swift */; };
+        A10000000000000000000003 /* BigInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000003 /* BigInteger.swift */; };
+        A10000000000000000000004 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000004 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+        B10000000000000000000001 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+        B10000000000000000000002 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+        B10000000000000000000003 /* BigInteger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigInteger.swift; sourceTree = "<group>"; };
+        B10000000000000000000004 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+        B10000000000000000000005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+        B10000000000000000000006 /* NOVACalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NOVACalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+        C10000000000000000000001 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+        D10000000000000000000001 = {
+            isa = PBXGroup;
+            children = (
+                D10000000000000000000002 /* NOVACalculator */,
+                D10000000000000000000003 /* Products */,
+            );
+            sourceTree = "<group>";
+        };
+        D10000000000000000000002 /* NOVACalculator */ = {
+            isa = PBXGroup;
+            path = NOVACalculator;
+            sourceTree = "<group>";
+            children = (
+                B10000000000000000000001 /* AppDelegate.swift */,
+                B10000000000000000000002 /* CalculatorViewController.swift */,
+                B10000000000000000000003 /* BigInteger.swift */,
+                B10000000000000000000004 /* Assets.xcassets */,
+                B10000000000000000000005 /* Info.plist */,
+            );
+        };
+        D10000000000000000000003 /* Products */ = {
+            isa = PBXGroup;
+            name = Products;
+            sourceTree = "<group>";
+            children = (
+                B10000000000000000000006 /* NOVACalculator.app */,
+            );
+        };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+        E10000000000000000000001 /* NOVACalculator */ = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = F10000000000000000000002 /* Build configuration list for PBXNativeTarget "NOVACalculator" */;
+            buildPhases = (
+                C10000000000000000000003 /* Sources */,
+                C10000000000000000000001 /* Frameworks */,
+                C10000000000000000000002 /* Resources */,
+            );
+            buildRules = ();
+            dependencies = ();
+            name = NOVACalculator;
+            productName = NOVACalculator;
+            productReference = B10000000000000000000006 /* NOVACalculator.app */;
+            productType = "com.apple.product-type.application";
+        };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+        E10000000000000000000002 /* Project object */ = {
+            isa = PBXProject;
+            attributes = {
+                BuildIndependentTargetsIn parallel = 1;
+                LastUpgradeCheck = 1410;
+                TargetAttributes = {
+                    E10000000000000000000001 = { CreatedOnToolsVersion = 14.1; };
+                };
+            };
+            buildConfigurationList = F10000000000000000000001 /* Build configuration list for PBXProject "NOVACalculator" */;
+            compatibilityVersion = "Xcode 14.0";
+            developmentRegion = en;
+            hasScannedForEncodings = 0;
+            knownRegions = (en, Base);
+            mainGroup = D10000000000000000000001;
+            productRefGroup = D10000000000000000000003 /* Products */;
+            projectDirPath = "";
+            projectRoot = "";
+            targets = (E10000000000000000000001 /* NOVACalculator */,);
+        };
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+        C10000000000000000000002 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000004 /* Assets.xcassets in Resources */,); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+        C10000000000000000000003 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000001 /* AppDelegate.swift in Sources */, A10000000000000000000002 /* CalculatorViewController.swift in Sources */, A10000000000000000000003 /* BigInteger.swift in Sources */,); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+        F20000000000000000000001 /* Debug Project */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                CLANG_ENABLE_MODULES = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+                SDKROOT = iphoneos;
+                SWIFT_VERSION = 5.0;
+            };
+            name = Debug;
+        };
+        F20000000000000000000002 /* Release Project */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                CLANG_ENABLE_MODULES = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+                SDKROOT = iphoneos;
+                SWIFT_VERSION = 5.0;
+            };
+            name = Release;
+        };
+        F20000000000000000000003 /* Debug Target */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+                CODE_SIGN_STYLE = Automatic;
+                ENABLE_BITCODE = NO;
+                GENERATE_INFOPLIST_FILE = NO;
+                INFOPLIST_FILE = NOVACalculator/Info.plist;
+                IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+                PRODUCT_BUNDLE_IDENTIFIER = com.nova.calculator;
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                SDKROOT = iphoneos;
+                SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+                SWIFT_VERSION = 5.0;
+                TARGETED_DEVICE_FAMILY = 1;
+                VALIDATE_PRODUCT = YES;
+            };
+            name = Debug;
+        };
+        F20000000000000000000004 /* Release Target */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+                CODE_SIGN_STYLE = Automatic;
+                ENABLE_BITCODE = NO;
+                GENERATE_INFOPLIST_FILE = NO;
+                INFOPLIST_FILE = NOVACalculator/Info.plist;
+                IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+                PRODUCT_BUNDLE_IDENTIFIER = com.nova.calculator;
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                SDKROOT = iphoneos;
+                SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+                SWIFT_VERSION = 5.0;
+                TARGETED_DEVICE_FAMILY = 1;
+                VALIDATE_PRODUCT = YES;
+            };
+            name = Release;
+        };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+        F30000000000000000000001 /* Build configuration list for PBXProject "NOVACalculator" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                F20000000000000000000001 /* Debug Project */,
+                F20000000000000000000002 /* Release Project */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+        F30000000000000000000002 /* Build configuration list for PBXNativeTarget "NOVACalculator" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                F20000000000000000000003 /* Debug Target */,
+                F20000000000000000000004 /* Release Target */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+/* End XCConfigurationList section */
+    };
+    rootObject = E10000000000000000000002 /* Project object */;
+}

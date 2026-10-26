@@ -1,0 +1,55 @@
+name: Build NOVA iOS IPA
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-unsigned-ipa:
+    runs-on: macos-14
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Select Xcode 15.4
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: "15.4"
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Build iPhone app (unsigned)
+        run: |
+          set -euo pipefail
+          xcodebuild \
+            -project NOVACalculator.xcodeproj \
+            -scheme NOVACalculator \
+            -configuration Release \
+            -sdk iphoneos \
+            -derivedDataPath "$RUNNER_TEMP/NOVA-DerivedData" \
+            IPHONEOS_DEPLOYMENT_TARGET=12.0 \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            build
+
+      - name: Package unsigned IPA
+        run: |
+          set -euo pipefail
+          APP_PATH="$RUNNER_TEMP/NOVA-DerivedData/Build/Products/Release-iphoneos/NOVACalculator.app"
+          test -d "$APP_PATH"
+          mkdir -p "$RUNNER_TEMP/ipa/Payload"
+          cp -R "$APP_PATH" "$RUNNER_TEMP/ipa/Payload/NOVACalculator.app"
+          cd "$RUNNER_TEMP/ipa"
+          /usr/bin/zip -qry "$GITHUB_WORKSPACE/NOVA-unsigned.ipa" Payload
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: NOVA-unsigned-IPA
+          path: NOVA-unsigned.ipa
+          if-no-files-found: error
+          retention-days: 7
